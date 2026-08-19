@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Surface & Background */
+    --bg-app: #FBFBFA;         /* Soft Powdery Beige */
+    --bg-card: #FFFFFF;        /* Pure Clean White */
+    --bg-subtle: #F5F4F2;      /* Input & Pill Inactive Background */
+    
+    /* Text & Typography */
+    --text-primary: #1E1E1E;   /* Soft Obsidian Black */
+    --text-secondary: #787878; /* Muted Neutral Gray */
+    --text-tertiary: #A6A6A6;  /* Placeholder & Light Meta */
+    
+    /* Brand Accents */
+    --accent-rose: #E26A74;    /* Vibrant Rose Coral */
+    --accent-light: #FDF2F3;   /* Soft Rose Tint */
+    --accent-hover: #D15560;   /* Pressed State Rose */
+
+    /* Borders & Dividers */
+    --border-subtle: #EFEFEF;  /* Ultra-light Card Border */
+    --border-divider: #E5E5E3; /* Section Divider */
+
+    /* Formula Badge Tokens */
+    --badge-matte-bg: #F3F4F6;     --badge-matte-text: #4B5563;
+    --badge-glossy-bg: #EFF6FF;    --badge-glossy-text: #2563EB;
+    --badge-velvet-bg: #FDF2F8;    --badge-velvet-text: #DB2777;
+
+    /* Personal Color Tone Badge Tokens */
+    --badge-warm-bg: #FFF7ED;      --badge-warm-text: #C2410C;
+    --badge-cool-bg: #F5F3FF;      --badge-cool-text: #7C3AED;
+    --badge-mute-bg: #F3F4F6;      --badge-mute-text: #64748B;
+  }
+
+  body {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+    background-color: var(--bg-app);
+    color: var(--text-primary);
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Scrollbar for sleek horizontal filter scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Smooth motion curves for Bottom Sheet & Toast */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out forwards;
+}
