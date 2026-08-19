@@ -2,7 +2,7 @@ import { LipProduct, RawLipData } from '../types/lip';
 import dataJson from './data.json';
 
 // Import raw JSON dataset from src/data/data.json
-export const RAW_LIP_DATA: RawLipData[] = dataJson as RawLipData[];
+const RAW_LIP_DATA: RawLipData[] = dataJson as RawLipData[];
 
 // Tone mapping helper for K-Beauty UX filters
 const toneMap: Record<number, '웜톤' | '쿨톤' | '뮤트'> = {

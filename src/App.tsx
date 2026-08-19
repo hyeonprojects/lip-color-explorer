@@ -9,7 +9,7 @@ import { Toast } from './components/Toast';
 import { EmptyState, SkeletonGrid } from './components/StateViews';
 import { Sparkles, Heart } from 'lucide-react';
 
-export function App() {
+function App() {
   // Filter States
   const [selectedFormula, setSelectedFormula] = useState<FormulaType>('전체');
   const [selectedTone, setSelectedTone] = useState<ToneType>('전체');

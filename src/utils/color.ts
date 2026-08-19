@@ -2,7 +2,7 @@
  * Calculates the relative luminance of a HEX color to determine contrast.
  * Returns a value between 0 (pure black) and 1 (pure white).
  */
-export function getLuminance(hex: string): number {
+function getLuminance(hex: string): number {
   const cleanHex = hex.replace('#', '');
   if (cleanHex.length !== 6) return 0.5;
 
